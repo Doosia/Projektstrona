@@ -22,7 +22,10 @@
 								<input type="password" name="password" placeholder="Podaj haslo">
 									<button type="submit" class="btn" name="login_btn">Zaloguj się</button>
 				</form>
-        <button type="submit" class="btn" name="login_btn">Tu bedzie logowanie przez fb</button>
+        <form>
+<input type="image" src="img/fb.png"  alt="">
+</form>
+
 				<p>
 					Nie masz konta ? <a href="register.php">Zarejestruj się</a>
 				</p>
