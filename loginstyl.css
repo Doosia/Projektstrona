@@ -87,22 +87,6 @@ h2
 	text-decoration: none;
 }
 
-
-#blad
-{
- width: 100%;
- margin-right: auto;
- margin-left: -15px;
- margin-top: 5px;
- padding: 30px;
- font-size: 20px;
- font-family: "Microsoft Sans Serif";
- text-shadow: 1px 0 1px red;
- color: rgb(255, 0, 38)
-
-}
-
-
 .btn {
 	width: 100%;
 	margin-bottom: 20px;
@@ -119,4 +103,22 @@ h2
 {
 	background: rgb(136, 127, 100);
 	color: #262626;
+}
+
+
+.loginBox input[type="fb"]
+{
+	border: none;
+	outline: none;
+	background-color: rgba(255, 255, 255, 0);
+}
+
+.bladlog
+{
+
+}
+
+.bladrej
+{
+	
 }

@@ -103,6 +103,7 @@
 			array_push($errors, "Hasło jest wymagane");
 		}
 
+
 		// attempt login if no errors on form
 		if (count($errors) == 0) {
 			$password = md5($password);

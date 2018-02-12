@@ -12,7 +12,9 @@
 </head>
 <body>
 			<form method="post" action="register.php">
+        <div class="bladrej">
 					<?php echo display_error(); ?>
+          </div>
 	<div class="loginBox">
 		<img src="img/user.png" class="user">
 			<h2> Stwórz konto ! </h2>

@@ -12,7 +12,9 @@
 </head>
 <body>
 		<form method="post" action="login.php">
+      <div class="bladlog">
 					<?php echo display_error(); ?>
+          </div>
 	<div class="loginBox">
 		<img src="img/user.png" class="user">
 			<h2> Witaj ! </h2>
@@ -23,7 +25,7 @@
 									<button type="submit" class="btn" name="login_btn">Zaloguj się</button>
 				</form>
         <form>
-<input type="image" src="img/fb.png"  alt="">
+<input type="image" src="img/fb.png">
 </form>
 
 				<p>
