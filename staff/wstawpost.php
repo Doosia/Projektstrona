@@ -15,9 +15,9 @@
 </head>
 <body>
 	<div class="header">
-		<h2>Admin - create user</h2>
+		<h2>Panel wstawiania aktualności</h2>
 	</div>
-	
+
 	<form method="post" action="create_user.php">
 
 		<?php echo display_error(); ?>

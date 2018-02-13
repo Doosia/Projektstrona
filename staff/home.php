@@ -23,7 +23,7 @@
 </head>
 <body>
 	<div class="header">
-		<h2>Admin - Home Page</h2>
+		<h2>Staff panel</h2>
 	</div>
 	<div class="content">
 		<!-- notification message -->
@@ -49,8 +49,9 @@
 					<small>
 						<i  style="color: #888;">(<?php echo ucfirst($_SESSION['Uczen']['user_type']); ?>)</i>
 						<br>
-						<a href="home.php?logout='1'" style="color: red;">logout</a>
-						&nbsp; <a href="create_user.php"> + add user</a>
+						<a href="home.php?logout='1'" style="color: red;">Wyloguj się</a>
+						&nbsp; <a href="wstawpost.php"> Umieść post</a>
+						&nbsp; <a href="zastepstwa.php"> wstaw zastepstwo</a>
 					</small>
 
 				<?php endif ?>
