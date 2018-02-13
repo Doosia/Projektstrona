@@ -13,7 +13,7 @@
 <body>
 		<form method="post" action="login.php">
       <div class="bladlog">
-					<?php echo display_error(); ?>
+
           </div>
 	<div class="loginBox">
 		<img src="img/user.png" class="user">

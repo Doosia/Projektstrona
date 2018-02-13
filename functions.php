@@ -104,32 +104,42 @@
 		}
 
 
-		// attempt login if no errors on form
-		if (count($errors) == 0) {
-			$password = md5($password);
 
-			$query = "SELECT * FROM users WHERE username='$username' AND password='$password' LIMIT 1";
-			$results = mysqli_query($db, $query);
-
-			if (mysqli_num_rows($results) == 1) { // user found
-				// check if user is admin or user
-				$logged_in_user = mysqli_fetch_assoc($results);
-				if ($logged_in_user['user_type'] == 'Nauczyciel') {
-
-					$_SESSION['Uczen'] = $logged_in_user;
-					$_SESSION['success']  = "Zalogowano!";
-					header('location: nauczyciel/home.php');
-				}else{
-					$_SESSION['Uczen'] = $logged_in_user;
-					$_SESSION['success']  = "Zalogowano!";
-
-					header('location: index.php');
+				// attempt login if no errors on form
+				if (count($errors) == 0) {
+					$password = md5($password);
+					$query = "SELECT * FROM users WHERE username='$username' AND password='$password' LIMIT 1";
+					$results = mysqli_query($db, $query);
+					if (mysqli_num_rows($results) == 1) { // user found
+						// check if user is admin or user
+						$logged_in_user = mysqli_fetch_assoc($results);
+						if ($logged_in_user['user_type'] == 'Staff')
+						{
+							$_SESSION['Uczen'] = $logged_in_user;
+							$_SESSION['success']  = "Zalogowano!";
+							header('location: staff/home.php');
+						}else{
+							$_SESSION['Uczen'] = $logged_in_user;
+							$_SESSION['success']  = "Zalogowano!";
+							header('location: index.php');
+						if ($logged_in_user['user_type'] == 'Nauczyciel')
+						 {
+							$_SESSION['Uczen'] = $logged_in_user;
+							$_SESSION['success']  = "Zalogowano!";
+							header('location: nauczyciel/home.php');
+						}else{
+							$_SESSION['Uczen'] = $logged_in_user;
+							$_SESSION['success']  = "Zalogowano!";
+							header('location: index.php');
+						}
+					}
 				}
-			}else {
-				array_push($errors, "Zły login lub hasło");
+					else {
+						array_push($errors, "Zły login lub hasło");
+					}
+				}
 			}
-		}
-	}
+
 
 	function isLoggedIn()
 	{
@@ -139,6 +149,17 @@
 			return false;
 		}
 	}
+
+
+	function isStaff()
+	{
+		if (isset($_SESSION['Uczen']) && $_SESSION['Uczen']['user_type'] == 'Staff' ) {
+			return true;
+		}else{
+			return false;
+		}
+	}
+
 
 	function isNauczyciel()
 	{
