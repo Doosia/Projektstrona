@@ -114,11 +114,11 @@
 			if (mysqli_num_rows($results) == 1) { // user found
 				// check if user is admin or user
 				$logged_in_user = mysqli_fetch_assoc($results);
-				if ($logged_in_user['user_type'] == 'staff') {
+				if ($logged_in_user['user_type'] == 'Nauczyciel') {
 
 					$_SESSION['Uczen'] = $logged_in_user;
 					$_SESSION['success']  = "Zalogowano!";
-					header('location: admin/home.php');
+					header('location: nauczyciel/home.php');
 				}else{
 					$_SESSION['Uczen'] = $logged_in_user;
 					$_SESSION['success']  = "Zalogowano!";
@@ -140,9 +140,9 @@
 		}
 	}
 
-	function isAdmin()
+	function isNauczyciel()
 	{
-		if (isset($_SESSION['Uczen']) && $_SESSION['Uczen']['user_type'] == 'staff' ) {
+		if (isset($_SESSION['Uczen']) && $_SESSION['Uczen']['user_type'] == 'Nauczyciel' ) {
 			return true;
 		}else{
 			return false;
