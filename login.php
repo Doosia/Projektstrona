@@ -13,8 +13,8 @@
 <body>
 		<form method="post" action="login.php">
       <div class="bladlog">
-
-          </div>
+   					<?php echo display_error(); ?>
+   </div>
 	<div class="loginBox">
 		<img src="img/user.png" class="user">
 			<h2> Witaj ! </h2>

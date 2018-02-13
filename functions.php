@@ -122,6 +122,7 @@
 							$_SESSION['Uczen'] = $logged_in_user;
 							$_SESSION['success']  = "Zalogowano!";
 							header('location: index.php');
+
 						if ($logged_in_user['user_type'] == 'Nauczyciel')
 						 {
 							$_SESSION['Uczen'] = $logged_in_user;
